@@ -1,0 +1,48 @@
+<?php
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Example</title>
+
+    <style>
+        #input1 {
+            border: 1px solid #000000;
+            width: 300px;
+            height: 30px;
+            padding: 5px;
+        }
+        #output1 {
+            border: 1px solid #000000;
+            width: 300px;
+            height: 30px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Capitalize First Letter of Each Word</h1>
+
+<input type="text" id="input1" oninput="capitalize()">
+<h2>Output:</h2>
+<p id="output1"></p>
+
+<script>
+function capitalize() {
+    var x = document.getElementById("input1").value;
+    var p = x.split(" ");
+    var y = "";
+
+    for (var i = 0; i < p.length; i++) {
+        y += p[i].charAt(0).toUpperCase() + p[i].slice(1) + " ";
+    }
+
+    document.getElementById("output1").textContent = y.trim();
+}
+</script>
+
+</body>
+</html>
